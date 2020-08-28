@@ -20,6 +20,13 @@ public class Student {
     @Column(name = "student_ssn")
     private String student_ssn;
 
+    public Student(){
+        this.studentId = 0;
+        this.studentFirstName = "";
+        this.studentLastName = "";
+        this.student_ssn = "";
+    }
+
     public Student(int studentId, String studentFirstName, String studentLastName, String student_ssn) {
         this.studentId = studentId;
         this.studentFirstName = studentFirstName;

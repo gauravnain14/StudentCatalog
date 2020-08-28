@@ -29,8 +29,13 @@ class ProfessorView extends Component {
     return(
       <div className="container">
         <h1 style={{textAlign:"center"}}>
-            <Link to="/">Student View</Link> | <Link to="/professorView">Professor View</Link>
-        </h1><br></br>
+          <table className="table">
+            <tr>
+              <td><Link to="/">Student View</Link><h5>(<Link to="/addStudent">Add Student</Link>)</h5></td>
+              <td><Link to="/professorView">Professor View</Link><h5>(<Link to="/addProfessor">Add Professor</Link>)</h5></td>
+              </tr>
+          </table>
+          </h1>
         <div className="jumbotron" style={{backgroundColor: "gray", color: "white"}}>
           <table className="table">
             <thead>

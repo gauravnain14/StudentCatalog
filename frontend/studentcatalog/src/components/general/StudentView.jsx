@@ -29,21 +29,27 @@ class StudentView extends Component {
     return(
       <div className="container">
         <h1 style={{textAlign:"center"}}>
-            <Link to="/">Student View</Link> | <Link to="/professorView">Professor View</Link></h1><br></br>
+          <table className="table">
+            <tr>
+              <td><Link to="/">Student View</Link><h5>(<Link to="/addStudent">Add Student</Link>)</h5></td>
+              <td><Link to="/professorView">Professor View</Link><h5>(<Link to="/addProfessor">Add Professor</Link>)</h5></td>
+              </tr>
+          </table>
+          </h1>
+            
+            
         <div className="jumbotron" style={{backgroundColor: "gray", color: "white"}}>
           <table className="table">
             <thead>
               <tr style={{textAlign: "center", color: "black"}}>
-                <th>Student Id</th>
                 <th>First Name</th>
                 <th>Last Name</th>
               </tr>
             </thead>
             <tbody>
             {
-              this.state.students.map(students =>
-                <tr style={{textAlign: "center"}} key={students.student_id}>
-                  <td>{students.student_id}</td>
+              this.state.students.map((count, students) =>
+                <tr style={{textAlign: "center", color: "green"}} key={count}>
                   <td>{students.student_first_name}</td>
                   <td>{students.student_last_name}</td>
                 </tr>

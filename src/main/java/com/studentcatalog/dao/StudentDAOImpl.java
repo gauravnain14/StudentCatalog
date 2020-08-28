@@ -24,9 +24,8 @@ public class StudentDAOImpl implements StudentDAO{
     @Transactional
     public List<Student> findAll(){
         Session session = entityManager.unwrap(Session.class);
-        Query<Student> query = session.createQuery("FROM student");
-        List<Student> students = query.getResultList();
-        return students;
+        Query<Student> query = session.createQuery("FROM Student");
+        return query.getResultList();
     }
 
     @Override
@@ -52,7 +51,7 @@ public class StudentDAOImpl implements StudentDAO{
     @Transactional
     public void createStudent(Student student){
         Session session = entityManager.unwrap(Session.class);
-        session.save(student);
+        session.saveOrUpdate(student);
     }
 
     @Override

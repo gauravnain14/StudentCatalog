@@ -23,7 +23,7 @@ public class ProfessorDAOImpl implements ProfessorDAO{
     @Transactional
     public List<Professor> findAll(){
         Session session = entityManager.unwrap(Session.class);
-        Query<Professor> query = session.createQuery("FROM professor");
+        Query<Professor> query = session.createQuery("FROM Professor");
         List<Professor> professors = query.getResultList();
         return professors;
     }
@@ -51,7 +51,7 @@ public class ProfessorDAOImpl implements ProfessorDAO{
     @Transactional
     public void createProfessor(Professor professor){
         Session session = entityManager.unwrap(Session.class);
-        session.save(professor);
+        session.saveOrUpdate(professor);
     }
 
     @Override
