@@ -42,7 +42,7 @@ export default class StudentView extends Component {
           <table className="table">
             <thead>
               <tr style={{textAlign: "center", color: "black"}}>
-                <th>Student ID</th>
+                
                 <th>First Name</th>
                 <th>Last Name</th>
               </tr>
@@ -51,7 +51,7 @@ export default class StudentView extends Component {
             {
               this.state.students.map(students =>
                 <tr style={{textAlign: "center", color: "white"}} key={students.students_id}>
-                  <td>{students.studentId}</td>
+                  
                   <td>{students.studentFirstName}</td>
                   <td>{students.studentLastName}</td>
                 </tr>

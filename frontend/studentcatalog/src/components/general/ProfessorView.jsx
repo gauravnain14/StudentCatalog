@@ -40,18 +40,18 @@ export default class ProfessorView extends Component {
           <table className="table">
             <thead>
               <tr style={{textAlign: "center", color: "black"}}>
-                <th>Professor Id</th>
                 <th>First Name</th>
                 <th>Last Name</th>
+                <th>SSN</th>
               </tr>
             </thead>
             <tbody>
             {
               this.state.professors.map(professors =>
                 <tr style={{textAlign: "center"}} key={professors.professorId}>
-                  <td>{professors.professorId}</td>
                   <td>{professors.professorFirstName}</td>
                   <td>{professors.professorLastName}</td>
+                  <td>{professors.professorSsn}</td>
                 </tr>
               )
             }
