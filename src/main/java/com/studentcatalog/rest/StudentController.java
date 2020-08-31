@@ -36,8 +36,9 @@ public class StudentController {
         return students;
     }
     @PostMapping("students/addStudent")
-    public void addStudent(@RequestBody Student student){
+    public Student addStudent(@RequestBody Student student){
         student.setStudentId(0);
         studentDAOImpl.createStudent(student);
+        return student;
     }
 }

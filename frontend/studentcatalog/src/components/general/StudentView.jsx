@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import { withRouter, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import StudentDataService from '../../services/StudentDataService'
 
-class StudentView extends Component {
+export default class StudentView extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -42,18 +42,20 @@ class StudentView extends Component {
           <table className="table">
             <thead>
               <tr style={{textAlign: "center", color: "black"}}>
+                <th>Student ID</th>
                 <th>First Name</th>
                 <th>Last Name</th>
               </tr>
             </thead>
             <tbody>
             {
-              this.state.students.map((count, students) =>
-                <tr style={{textAlign: "center", color: "green"}} key={count}>
-                  <td>{students.student_first_name}</td>
-                  <td>{students.student_last_name}</td>
+              this.state.students.map(students =>
+                <tr style={{textAlign: "center", color: "white"}} key={students.students_id}>
+                  <td>{students.studentId}</td>
+                  <td>{students.studentFirstName}</td>
+                  <td>{students.studentLastName}</td>
                 </tr>
-              )
+              ) 
             }
             </tbody>
           </table>
@@ -63,4 +65,3 @@ class StudentView extends Component {
   }
 }
 
-export default withRouter(StudentView);

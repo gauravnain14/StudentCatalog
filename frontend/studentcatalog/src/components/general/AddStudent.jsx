@@ -6,9 +6,10 @@ class AddStudent extends Component {
     constructor(props){
         super(props)
         this.state = {
-            firstName: '',
-            lastName: '',
-            ssn: ''
+            studentId: this.props.match.params.studentId,
+            studentFirstName: '',
+            studentLastName: '',
+            studentSsn: ''
         }
         this.handleSubmit = this.handleSubmit.bind(this)
         this.handleChange = this.handleChange.bind(this)
@@ -20,14 +21,13 @@ class AddStudent extends Component {
 
       handleSubmit() {
         let student = {
-          id: 0,
-          firstName: this.state.firstName,
-          lastName: this.state.lastName,
-          ssn: this.state.ssn
+          studentId: this.state.studentId,
+          studentFirstName: this.state.studentFirstName,
+          studentLastName: this.state.studentLastName,
+          studentSsn: this.state.studentSsn
         }
         StudentDataService.addStudent(student)
       }
-
 
     render() {
       return(
@@ -40,11 +40,13 @@ class AddStudent extends Component {
             <div className="container">
                     <form onSubmit={this.handleSubmit}>
                         <div className="form-group">
-                         <label>First Name:</label><input className="form-control" type="text" name="firstName" onChange={this.handleChange}></input>
+                         <label>Student Id: </label>
+                         <input className="form-control" type="text" value={this.state.studentId} disabled/>
+                         <label>First Name:</label><input className="form-control" type="text" name="studentFirstName" onChange={this.handleChange}></input>
                         </div><div>
-                         <label>Last Name:</label><input className="form-control" type="text" name="lastName" onChange={this.handleChange}></input>
+                         <label>Last Name:</label><input className="form-control" type="text" name="studentLastName" onChange={this.handleChange}></input>
                         </div><div>
-                         <label>Social Security Number:</label><input className="form-control" type="text" name="ssn" onChange={this.handleChange}></input>
+                         <label>Social Security Number:</label><input className="form-control" type="text" name="studentSsn" onChange={this.handleChange}></input>
                         </div><br/><br/>
                       <button className="btn btn-success" type="submit">Submit</button><br/><br/>
                     </form>

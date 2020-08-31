@@ -19,6 +19,13 @@ public class Professor {
     @Column(name = "professor_ssn")
     private String professor_ssn;
 
+    public Professor() {
+        this.professorId = 0;
+        this.professorFirstName = "";
+        this.professorLastName = "";
+        this.professor_ssn = "";
+    }
+
     public Professor(int professorId, String professorFirstName, String professorLastName, String professor_ssn) {
         this.professorId = professorId;
         this.professorFirstName = professorFirstName;

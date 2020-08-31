@@ -1,8 +1,8 @@
 import React, { Component } from 'react'
-import { withRouter, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import ProfessorDataService from '../../services/ProfessorDataService'
 
-class ProfessorView extends Component {
+export default class ProfessorView extends Component {
   constructor(props) {
     super(props)
     this.state = {
@@ -48,10 +48,10 @@ class ProfessorView extends Component {
             <tbody>
             {
               this.state.professors.map(professors =>
-                <tr style={{textAlign: "center"}} key={professors.professor_id}>
-                  <td>{professors.professor_id}</td>
-                  <td>{professors.professor_first_name}</td>
-                  <td>{professors.professor_last_name}</td>
+                <tr style={{textAlign: "center"}} key={professors.professorId}>
+                  <td>{professors.professorId}</td>
+                  <td>{professors.professorFirstName}</td>
+                  <td>{professors.professorLastName}</td>
                 </tr>
               )
             }
@@ -62,5 +62,3 @@ class ProfessorView extends Component {
     )
   }
 }
-
-export default withRouter(ProfessorView);

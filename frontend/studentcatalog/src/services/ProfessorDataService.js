@@ -7,11 +7,11 @@ class ProfessorDataService {
   }
 
   getProfessorByName(firstName, lastName) {
-    return axios.get(`http://localhost:8080/first_name/${lastName}/last_name/${firstName}`)
+    return axios.get(`http://localhost:8080/professors/first_name/${lastName}/last_name/${firstName}`)
   }
 
   addProfessor(professor) {
-    return axios.post(`http://localhost:8080/addProfessors`, professor)
+    return axios.post(`http://localhost:8080/professors/addProfessors`, professor)
   }
 }
 
