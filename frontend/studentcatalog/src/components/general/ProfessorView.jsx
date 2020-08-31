@@ -27,16 +27,16 @@ export default class ProfessorView extends Component {
 
   render() {
     return(
-      <div className="container">
+      <div className="container" style={{backgroundColor: "gray", color: "white"}}>
         <h1 style={{textAlign:"center"}}>
-          <table className="table">
+          <table className="table" style={{backgroundColor: "lightgray", color: "black"}}>
             <tr>
               <td><Link to="/">Student View</Link><h5>(<Link to="/addStudent">Add Student</Link>)</h5></td>
               <td><Link to="/professorView">Professor View</Link><h5>(<Link to="/addProfessor">Add Professor</Link>)</h5></td>
               </tr>
           </table>
           </h1>
-        <div className="jumbotron" style={{backgroundColor: "gray", color: "white"}}>
+        <div className="jumbotron" style={{backgroundColor: '#129FFF', color: "white"}}>
           <table className="table">
             <thead>
               <tr style={{textAlign: "center", color: "black"}}>
@@ -51,7 +51,7 @@ export default class ProfessorView extends Component {
                 <tr style={{textAlign: "center"}} key={professors.professorId}>
                   <td>{professors.professorFirstName}</td>
                   <td>{professors.professorLastName}</td>
-                  <td>{professors.professorSsn}</td>
+                  <td>{professors.professor_ssn}</td>
                 </tr>
               )
             }
