@@ -38,6 +38,11 @@
 }
 
 body {
-  background-color:gray;
-
+  background-color:yellowgreen;
+  background-image: url("https://images.ctfassets.net/usf1vwtuqyxm/3vjglYWTc0svDmPj6OB0QN/95c4a868036f5280219ca57bff4bbe8d/release_1_platform_9_3-4.png");
+  
+  display: block;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
 }

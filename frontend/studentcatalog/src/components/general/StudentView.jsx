@@ -27,9 +27,9 @@ export default class StudentView extends Component {
 
   render() {
     return(
-      <div className="container" style={{backgroundColor: "gray", color: "white"}}>
+      <div className="container" style={{backgroundColor: "yellowgreen", color: "white"}}>
         <h1 style={{textAlign:"center"}}>
-          <table className="table"style={{backgroundColor: "lightgray", color: "black"}}>
+          <table className="table"style={{backgroundColor: "yellowgreen", color: "black"}}>
             <tr>
               <td><Link to="/">Student View</Link><h5>(<Link to="/addStudent">Add Student</Link>)</h5></td>
               <td><Link to="/professorView">Professor View</Link><h5>(<Link to="/addProfessor">Add Professor</Link>)</h5></td>
@@ -37,20 +37,21 @@ export default class StudentView extends Component {
           </table>
           </h1>
             
-            
+          <div style={{backgroundColor: 'yellowgreen', color: "black"}}><h5>Search/Sort function under maintenance</h5></div>
         <div className="jumbotron" style={{backgroundColor: '#129FFF', color: "white"}}>
+        
           <table className="table">
             <thead>
               <tr style={{textAlign: "center", color: "black"}}>
                 
-                <th>First Name</th>
-                <th>Last Name</th>
+                <th><b><h4>First Name</h4></b></th>
+                <th><b><h4>Last Name</h4></b></th>
               </tr>
             </thead>
             <tbody>
             {
               this.state.students.map(students =>
-                <tr style={{textAlign: "center", color: "black"}} key={students.students_id}>
+                <tr style={{textAlign: "center", color: "white"}} key={students.students_id}>
                   
                   <td>{students.studentFirstName}</td>
                   <td>{students.studentLastName}</td>
