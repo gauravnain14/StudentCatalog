@@ -39,7 +39,6 @@ export default class StudentView extends Component {
             
           <div style={{backgroundColor: 'yellowgreen', color: "black"}}><h5>Search/Sort function under maintenance</h5></div>
         <div className="jumbotron" style={{backgroundColor: '#129FFF', color: "white"}}>
-        
           <table className="table">
             <thead>
               <tr style={{textAlign: "center", color: "black"}}>
